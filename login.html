@@ -1,44 +1,165 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Вход</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <title>Bulgarian Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f5f2;
+            margin: 0;
+            padding: 0;
+        }
+        text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        header {
+            background: #8b0000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #8b0000;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        h2 {
+            color: #8b0000;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .menu-item {
+            flex: 1 1 220px;
+            background: #faf6f0;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .menu-item img {
+            width: 100%;
+            max-width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .menu-item h3 {
+            margin: 10px 0 5px 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .menu-item p {
+            font-size: 15px;
+            color: #555;
+        }
+        
+    </style>
 </head>
 <body>
     <header>
-        <h1>Ресторант "Вкусно и Традиционно"</h1>
+        <div class="text">
         <nav>
-            <ul>
-                <li><a href="index.html">Начало</a></li>
-                <li><a href="appetizers.html">Предястия</a></li>
-                <li><a href="mains.html">Основни</a></li>
-                <li><a href="desserts.html">Десерти</a></li>
-                <li><a href="drinks.html">Напитки</a></li>
-                <li><a href="contact.html">Контакт</a></li>
-                <li><a href="login.html">Вход</a></li>
-            </ul>
+            <a href="#starters">Starter</a>
+            <a href="#main-course">Main Course</a>
+            <a href="#dessert">Dessert</a>
+            <a href="#drinks">Drinks</a>
+        </nav>
+        </div>
+        <h1>Bulgarian Restaurant Menu</h1>
+        <nav>
+            <a href="#starters">Starters</a>
+            <a href="#main-course">Main Course</a>
+            <a href="#dessert">Dessert</a>
+            <a href="#drinks">Drinks</a>
         </nav>
     </header>
 
-    <main>
-        <section class="login-section">
-            <h2>Вход в системата</h2>
-            <form action="#" method="post" class="login-form">
-                <label for="username">Потребителско име:</vankata1997@gmail.com>
-                <input type="text" id="username" name="username" required />
+    <section id="starters">
+        <h2>Starters</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="shopska.jpg" alt="Shopska Salad" width="400" height="400">
+                <h3>Shopska Salad</h3>
+                <p>Fresh tomatoes, cucumbers, onions, peppers, and Bulgarian sirene cheese.</p>
+            </div>
+            <div class="menu-item">
+                <img src="tarator.jpg" alt="Tarator" width="400" height="400">
+                <h3>Tarator</h3>
+                <p>Cold yogurt soup with cucumbers, garlic, dill, and walnuts.</p>
+            </div>
+        </div>
+    </section>
 
-                <label for="password">Парола:</vankata1997>
-                <input type="password" id="password" name="password" required />
+    <section id="main-course">
+        <h2>Main Course</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Kavarma.jpg" alt="Kavarma">
+                <h3>Kavarma</h3>
+                <p>Traditional stew with pork, onions, peppers, mushrooms, and spices.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Moussaka_Bulgaria.jpg" alt="Bulgarian Moussaka">
+                <h3>Bulgarian Moussaka</h3>
+                <p>Baked dish with potatoes, minced meat, eggs, and yogurt topping.</p>
+            </div>
+        </div>
+    </section>
 
-                <button type="submit">Вход</button>
-            </form>
-        </section>
-    </main>
+    <section id="dessert">
+        <h2>Dessert</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Baklava%2C_Bulgaria.jpg" alt="Baklava">
+                <h3>Baklava</h3>
+                <p>Sweet pastry with layers of filo, walnuts, and honey syrup.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Bulgarian_Banitsa.jpg" alt="Banitsa">
+                <h3>Banitsa</h3>
+                <p>Phyllo pastry filled with eggs, yogurt, and Bulgarian cheese.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Ресторант "Вкусно и Традиционно". Всички права запазени.</p>
-    </footer>
+    <section id="drinks">
+        <h2>Drinks</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Ayran.jpg" alt="Ayran">
+                <h3>Ayran</h3>
+                <p>Refreshing yogurt-based drink, lightly salted.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Rakia.jpg" alt="Rakia">
+                <h3>Rakia</h3>
+                <p>Traditional Bulgarian fruit brandy, served as an aperitif.</p>
+            </div>
+        </div>
+    </section>
 </body>
-</html>
+</html></div></section></div>
